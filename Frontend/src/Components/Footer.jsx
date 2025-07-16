@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { usePlayback } from '../context/PlaybackContext';
+import { usePlayback } from '../Context/PlaybackContext';
 import { FaPlay, FaPause, FaForward, FaBackward } from 'react-icons/fa';
 
 const Footer = () => {
