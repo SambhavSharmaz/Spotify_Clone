@@ -5,7 +5,7 @@ import { FaPlay, FaPause, FaForward, FaBackward } from 'react-icons/fa';
 const Footer = () => {
   const { currentTrack, isPlaying, togglePlayPause } = usePlayback();
   const audioRef = useRef(null);
-  const [previewUrl, setPreviewUrl] = useState("/music.mp3"); // default fallback
+  const [previewUrl, setPreviewUrl] = useState("/music.mp3"); 
 
   useEffect(() => {
     const fetchPreview = async () => {
