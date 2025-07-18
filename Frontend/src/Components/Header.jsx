@@ -6,6 +6,7 @@ import debounce from "lodash.debounce";
 
 const Header = () => {
   const { query, setQuery, setSearchResults, setLoading } = useTrack();
+  
 
   const fetchResults = useCallback(
     debounce(async (q) => {

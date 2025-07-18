@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import musicSearchAnimation from "../Assets/loading.json";
 
 const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
+const clonedAnimation = JSON.parse(JSON.stringify(musicSearchAnimation));
 
 const MainBody = () => {
   const { setCurrentItem } = useTrack();
@@ -49,7 +50,7 @@ const MainBody = () => {
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center">
-        <Lottie animationData={musicSearchAnimation} loop={true} className="w-72 h-72" />
+        <Lottie animationData={clonedAnimation} loop={true} className="w-72 h-72" />
         <p className="mt-4 text-gray-400 text-lg">Loading music content for you...</p>
       </div>
     );

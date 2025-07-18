@@ -7,6 +7,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Lottie from "lottie-react";
 import idleMusicAnimation from "../Assets/idle.json";
 
+const clonedAnimation = JSON.parse(JSON.stringify(idleMusicAnimation));
+
 
 const CurrentTrack = () => {
 	const { currentItem } = useTrack();
@@ -49,7 +51,7 @@ const CurrentTrack = () => {
 	if (!currentItem) {
 		return (
 			<div className="flex flex-col items-center justify-center h-full text-center">
-      <Lottie animationData={idleMusicAnimation} loop={true} className="w-52 h-52" />
+      <Lottie animationData={clonedAnimation} loop={true} className="w-52 h-52" />
       <p className="mt-3 text-gray-400">Select a track to see details.</p>
     </div>
 		);
