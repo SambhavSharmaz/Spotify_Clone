@@ -4,6 +4,9 @@ import { usePlayback } from "../Context/PlaybackContext";
 import Skeleton from "react-loading-skeleton";
 import { FaPlay } from "react-icons/fa";
 import "react-loading-skeleton/dist/skeleton.css";
+import Lottie from "lottie-react";
+import idleMusicAnimation from "../Assets/idle.json";
+
 
 const CurrentTrack = () => {
 	const { currentItem } = useTrack();
@@ -45,9 +48,10 @@ const CurrentTrack = () => {
 
 	if (!currentItem) {
 		return (
-			<div className="text-gray-400 italic p-4">
-				Select a track or podcast to view details.
-			</div>
+			<div className="flex flex-col items-center justify-center h-full text-center">
+      <Lottie animationData={idleMusicAnimation} loop={true} className="w-52 h-52" />
+      <p className="mt-3 text-gray-400">Select a track to see details.</p>
+    </div>
 		);
 	}
 
@@ -65,7 +69,6 @@ const CurrentTrack = () => {
 
 	return (
 		<div className="text-white p-6 space-y-12 overflow-y-auto scrollbar">
-			{/* Image */}
 			{coverUrl && (
 				<img
 					src={coverUrl}
@@ -73,12 +76,10 @@ const CurrentTrack = () => {
 					className="w-full rounded-lg shadow aspect-square object-cover"
 				/>
 			)}
-
 			<div>
 				<h2 className="text-xl font-semibold">{currentItem.name}</h2>
 				<p className="text-sm text-gray-400">{artistNames}</p>
 
-				{/* Play Button */}
 				<button
 					onClick={handlePlay}
 					className="mt-4 inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded shadow"
@@ -87,8 +88,6 @@ const CurrentTrack = () => {
 					Play
 				</button>
 			</div>
-
-			{/* About the Artist */}
 			{loading ? (
 				<div className="space-y-3">
 					<Skeleton height={24} width="60%" baseColor="#333" highlightColor="#555" />

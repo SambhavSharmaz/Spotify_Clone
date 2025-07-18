@@ -1,4 +1,3 @@
-// Inside TrackContext.js or wherever you manage context:
 import { createContext, useContext, useState } from "react";
 
 const TrackContext = createContext();
@@ -7,7 +6,7 @@ export const TrackProvider = ({ children }) => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [currentItem, setCurrentItem] = useState(null); // <-- New
+  const [currentItem, setCurrentItem] = useState(null); 
 
   return (
     <TrackContext.Provider
@@ -19,7 +18,7 @@ export const TrackProvider = ({ children }) => {
         loading,
         setLoading,
         currentItem,
-        setCurrentItem, // <-- Provide setter
+        setCurrentItem,
       }}
     >
       {children}
