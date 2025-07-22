@@ -24,3 +24,8 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
+}
