@@ -4,10 +4,6 @@ import { usePlayback } from "../Context/PlaybackContext";
 import Skeleton from "react-loading-skeleton";
 import { FaPlay, FaPause } from "react-icons/fa";
 import "react-loading-skeleton/dist/skeleton.css";
-// import Lottie from "lottie-react";
-// import idleMusicAnimation from "../Assets/idle.json";
-
-// const clonedAnimation = JSON.parse(JSON.stringify(idleMusicAnimation));
 
 const CurrentTrack = () => {
   const { currentItem, recentlyPlayed, normalizeTrack } = useTrack();
@@ -31,7 +27,7 @@ const CurrentTrack = () => {
             method: "GET",
             headers: {
               "x-rapidapi-host": "spotify81.p.rapidapi.com",
-              "x-rapidapi-key": "03b8091b43msh923e43b1c789f69p170609jsncd6c44c42923",
+              "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104",
             },
           }
         );
@@ -50,7 +46,6 @@ const CurrentTrack = () => {
   if (!currentItem) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center">
-        {/* <Lottie animationData={clonedAnimation} loop={true} className="w-52 h-52" /> */}
         <p className="mt-3 text-gray-400">Select a track or album to see details.</p>
       </div>
     );
@@ -73,7 +68,6 @@ const CurrentTrack = () => {
 
   return (
     <div className="text-white p-6 space-y-12 overflow-y-auto scrollbar">
-      {/* Album/Track Cover */}
       <div className="flex justify-between items-start">
         {coverUrl && (
           <img
@@ -92,13 +86,11 @@ const CurrentTrack = () => {
         )}
       </div>
 
-      {/* Title & Artist */}
       <div>
         <h2 className="text-2xl font-bold">{currentItem.name}</h2>
         <p className="text-lg text-gray-400">{artistNames}</p>
       </div>
 
-      {/* Album Tracks */}
       {isAlbum && (
         <div className="bg-gray-900 p-4 rounded-lg shadow-md space-y-2">
           <h3 className="text-lg font-bold mb-3 text-green-400">Tracks in this Album</h3>
@@ -130,7 +122,6 @@ const CurrentTrack = () => {
         </div>
       )}
 
-      {/* About Artist */}
       {loading ? (
         <div className="space-y-3">
           <Skeleton height={24} width="60%" baseColor="#333" highlightColor="#555" />

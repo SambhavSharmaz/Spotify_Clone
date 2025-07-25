@@ -34,7 +34,7 @@ const Footer = () => {
             method: "GET",
             headers: {
               "x-rapidapi-host": "spotify81.p.rapidapi.com",
-              "x-rapidapi-key": "03b8091b43msh923e43b1c789f69p170609jsncd6c44c42923"
+              "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104"
             }
           }
         );
@@ -50,7 +50,6 @@ const Footer = () => {
     fetchPreview();
   }, [currentTrack]);
 
-  // Playback progress and metadata
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -74,7 +73,6 @@ const Footer = () => {
     };
   }, [volume, playNext]);
 
-  // Start/Pause playback
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -82,7 +80,6 @@ const Footer = () => {
     isPlaying && previewUrl ? audio.play().catch(console.error) : audio.pause();
   }, [isPlaying, previewUrl]);
 
-  // Keyboard toggle for spacebar
   useEffect(() => {
     const handleKey = (e) => {
       if (e.code === 'Space') {
@@ -127,7 +124,6 @@ const Footer = () => {
     <footer className="bg-black w-full h-28 px-6 py-2 flex items-center justify-between text-white shadow-inner z-40 select-none">
       {previewUrl && <audio ref={audioRef} src={previewUrl} />}
 
-      {/* Left: Track Info */}
       <div className="flex items-center gap-4 w-[30%] min-w-[180px]">
         <motion.img
           src={coverUrl}
@@ -142,7 +138,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Center: Controls */}
       <div className="flex flex-col items-center justify-center w-[40%] max-w-[420px]">
         <div className="flex gap-6 mb-1 items-center">
           <FaBackward
@@ -190,7 +185,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Right: Volume */}
       <div className="w-[30%] min-w-[180px] flex justify-end items-center gap-2">
         <FaVolumeDown className="text-sm" />
         <input

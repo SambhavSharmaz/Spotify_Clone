@@ -87,7 +87,6 @@ const Library = () => {
   );
 };
 
-// Reusable component for static sections
 const LibraryItem = ({ icon, label }) => (
   <div className="flex items-center gap-2 hover:text-green-400 cursor-pointer transition">
     {icon}

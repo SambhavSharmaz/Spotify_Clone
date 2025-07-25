@@ -30,7 +30,7 @@ const Header = () => {
           {
             headers: {
               "x-rapidapi-host": "spotify81.p.rapidapi.com",
-              "x-rapidapi-key": "03b8091b43msh923e43b1c789f69p170609jsncd6c44c42923",
+              "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104",
             },
           }
         );
@@ -72,7 +72,7 @@ const Header = () => {
         const res = await fetch(`https://spotify81.p.rapidapi.com/albums?ids=${albumId}`, {
           headers: {
             "x-rapidapi-host": "spotify81.p.rapidapi.com",
-            "x-rapidapi-key": "03b8091b43msh923e43b1c789f69p170609jsncd6c44c42923",
+            "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104",
           },
         });
         const data = await res.json();

@@ -9,9 +9,9 @@ import { PlaybackProvider } from './Context/PlaybackContext';
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <TrackProvider>
-    <PlaybackProvider>
-            <App />
-    </PlaybackProvider>
+      <PlaybackProvider>
+        <App />
+      </PlaybackProvider>
     </TrackProvider>
   </React.StrictMode>
 );

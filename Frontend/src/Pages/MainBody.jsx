@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
 import { useTrack } from "../Context/TrackContext";
 import { usePlayback } from "../Context/PlaybackContext";
-// import Lottie from "lottie-react";
-// import musicSearchAnimation from "../Assets/loading.json";
 import { FaPlay } from "react-icons/fa";
 
 const API_HOST = "spotify81.p.rapidapi.com";
-const API_KEY = "03b8091b43msh923e43b1c789f69p170609jsncd6c44c42923";
+const API_KEY = "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104";
 const HEADERS = {
   "x-rapidapi-host": API_HOST,
   "x-rapidapi-key": API_KEY,
 };
-
-// const clonedAnimation = JSON.parse(JSON.stringify(musicSearchAnimation));
 
 const CATEGORY_LABELS = [
   "Made for You",
@@ -213,7 +209,6 @@ const MainBody = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center">
-        {/* <Lottie animationData={clonedAnimation} loop={true} className="w-72 h-72" /> */}
         <p className="mt-4 text-gray-400 text-lg">Loading awesome music for you...</p>
       </div>
     );

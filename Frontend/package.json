@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.10.0",
+    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/vite": "^4.1.11",
-    "axios": "^1.10.0",
+    "axios": "^1.11.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.6",
     "lodash.debounce": "^4.0.8",
