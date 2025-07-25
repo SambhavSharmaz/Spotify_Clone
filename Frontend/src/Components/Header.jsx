@@ -133,12 +133,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-black via-gray-900 to-black backdrop-blur-md text-white px-6 py-4 shadow-md">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-        {/* Left Logo */}
         <div className="text-2xl font-extrabold text-green-400 tracking-tight">
-          Spotify<span className="text-white font-light">Clone</span>
+          Groov<span className="text-white font-light">ify</span>
         </div>
 
-        {/* Center Search + Nav */}
         <div className="flex items-center gap-4 w-full max-w-3xl flex-grow relative">
           <FaHome title="Home" className="text-xl hover:text-green-400 cursor-pointer" />
 
