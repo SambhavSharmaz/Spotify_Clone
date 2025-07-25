@@ -23,7 +23,6 @@ const Footer = () => {
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
 
-  // Fetch preview on track change
   useEffect(() => {
     const fetchPreview = async () => {
       if (!currentTrack?.id) return;
@@ -34,7 +33,7 @@ const Footer = () => {
             method: "GET",
             headers: {
               "x-rapidapi-host": "spotify81.p.rapidapi.com",
-              "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104"
+              "x-rapidapi-key": import.meta.env.VITE_RAPID_API_KEY
             }
           }
         );

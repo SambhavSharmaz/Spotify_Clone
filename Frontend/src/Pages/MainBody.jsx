@@ -4,7 +4,7 @@ import { usePlayback } from "../Context/PlaybackContext";
 import { FaPlay } from "react-icons/fa";
 
 const API_HOST = "spotify81.p.rapidapi.com";
-const API_KEY = "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104";
+const API_KEY = import.meta.env.VITE_RAPID_API_KEY;
 const HEADERS = {
   "x-rapidapi-host": API_HOST,
   "x-rapidapi-key": API_KEY,

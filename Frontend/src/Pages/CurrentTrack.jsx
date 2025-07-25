@@ -27,7 +27,7 @@ const CurrentTrack = () => {
             method: "GET",
             headers: {
               "x-rapidapi-host": "spotify81.p.rapidapi.com",
-              "x-rapidapi-key": "f9fdee2ae8msh668e71d4425d67fp173620jsnadf405add104",
+              "x-rapidapi-key": import.meta.env.VITE_RAPID_API_KEY
             },
           }
         );
